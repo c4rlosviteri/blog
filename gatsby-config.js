@@ -1,14 +1,53 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `Carlos Viteri's Blog`,
+    author: {
+      name: `Carlos Viteri`,
+      title: `Front End Engineer`,
+      company: {
+        name: `Verndale`,
+        url: `https://verndale.com`,
+      },
+    },
+    description: `HTML, CSS, JavaScript and Computer Science`,
+    siteUrl: `https://carlosviteri.dev/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `c4rlosviteri`,
     },
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-i18n',
+      options: {
+        pagesPaths: [`${__dirname}/content/blog`],
+        langKeyDefault: 'en',
+        prefixDefault: false,
+        useLangKeyLayout: false,
+        markdownRemark: {
+          postPage: 'src/templates/blog-post.js',
+          query: `
+            {
+              allMarkdownRemark(filter: {
+                fields: {
+                  langKey: {
+                    eq: "en"
+                  }
+                }
+              }) {
+                edges {
+                  node {
+                    fields {
+                      slug,
+                      langKey
+                    }
+                  }
+                }
+              }
+            }
+          `,
+        },
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -77,4 +116,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
