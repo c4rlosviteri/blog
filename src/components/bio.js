@@ -56,7 +56,7 @@ function Bio() {
       />
       <p>
         <strong>{author.name}</strong> works at{` `}
-        <a href={author.company.url}>{author.company.name}</a> as{` `}
+        <a href={author.company.url}>{author.company.name}</a> as a {` `}
         {author.title}. In his free time he writes posts about HTML,
         CSS and JavaScript.
       </p>
