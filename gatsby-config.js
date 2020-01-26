@@ -3,7 +3,7 @@ module.exports = {
     title: `Carlos Viteri's Blog`,
     author: {
       name: `Carlos Viteri`,
-      title: `Front End Engineer`,
+      title: `Senior Front End Engineer`,
       company: {
         name: `Verndale`,
         url: `https://verndale.com`,

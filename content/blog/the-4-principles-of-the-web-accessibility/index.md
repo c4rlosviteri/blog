@@ -8,7 +8,7 @@ description: 'Accessibility refers to the design and development of websites, ap
 
 Accessibility refers to the design and development of websites, applications or services that can be operated by people with disabilities. Addressing accessibility issues improves the experience not only for that group of people but for everyone.
 
-In the context of web development, we can take a look at the [Web Content Accessibility Guidelines (WCAG) 2.0](https://www.w3.org/TR/WCAG20/) that is a compilation of best practices and guidelines that were written by accessibility experts. WCAG is based on four principles:
+In the context of web development, we can take a look at the [Web Content Accessibility Guidelines (WCAG) 2.0](https://www.w3.org/TR/WCAG20/). This is a compilation of best practices and guidelines that were written by accessibility experts. WCAG is based on four principles:
 
 > Principle 1: Perceivable  -  Information and user interface components must be presentable to users in ways they can perceive.
 
