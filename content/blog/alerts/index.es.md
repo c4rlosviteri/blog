@@ -26,3 +26,12 @@ Por otra parte, podemos crear una alert añadiendo dos atributos `aria`:
   <p>Alerta de ejemplo: Contenido de la alerta</p>
 </div>
 ```
+
+A veces vas a querer que el usuario cierre la alerta. Para hacerlo tienes que añadir un botón de cierre etiquetado usando un `aria-label`, _solamente si el text interno del botón no es lo suficientemente descriptivo_.
+
+```html
+<div role="alert">
+  <button aria-label="Cerrar alerta">×</button>
+  <p>Alerta de ejemplo: Contenido de la alerta</p>
+</div>
+```
