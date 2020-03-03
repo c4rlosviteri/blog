@@ -1,8 +1,10 @@
 ---
-title: Accessible alerts
+title: 'Accessible components: Alerts'
 date: '2020-01-27T10:00:00.000Z'
-description: 'Create an alert component to provide feedback messages for user actions.'
+description: 'In this article we will create an alert component to provide feedback messages for user actions.'
 ---
+
+![Accessible components: Alerts](./alerts.png)
 
 Alerts are a very common pattern to provide feedback messages for user actions such as error, warning or information. Do you know how to create a truly accessible alert? In this tutorial, we will learn how to create one.
 

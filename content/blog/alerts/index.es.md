@@ -1,8 +1,10 @@
 ---
-title: Alertas accessibles
+title: 'Componentes accessibles: Alertas'
 date: '2020-01-27T10:00:00.000Z'
-description: 'Crea un componente de alerta para proveer mensajes de feedback para acciones de usuarios'
+description: 'En este artículo crearemos un componente de alerta para proveer mensajes de feedback para acciones de usuarios'
 ---
+
+![Componentes accessibles: Alertas](./alerts.png)
 
 Las alertas son un patron muy común para proveer mensajes de feedback para acciones de usuario como error, alerta o informacion. ¿Sabes como crear una alerta verdaderamente accesible? En este tutorial vamos a aprender como crear una.
 
