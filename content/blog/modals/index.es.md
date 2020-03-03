@@ -86,9 +86,7 @@ El primer botón no tiene ningún atributo `aria` porque el texto que tiene dent
 }
 ```
 
-Primero que todo estamos ocultando el modal si tiene un atributo `aria-hidden="true". Después estamos creando un fondo
-
-First of all, we are hiding the modal if it has the attribute `aria-hidden="true"`. Then we are creating a backdrop to tener suficiente contraste entre el modal y el resto de la página. Y finalmente estamos evitando que el contenido vertical se oculte del viewport agregando un scroll del eje Y si el contenido es más alto que `100vh`.
+Primero que todo estamos ocultando el modal si tiene un atributo `aria-hidden="true". Después estamos creando un fondo para tener suficiente contraste entre el modal y el resto de la página. Y finalmente estamos evitando que el contenido vertical se oculte del viewport agregando un scroll del eje Y si el contenido es más alto que `100vh`.
 
 ### JavaScript
 
@@ -141,8 +139,6 @@ function closeModal() {
 ```
 
 En el JavaScript estamos activando o desactivando el atributo `aria-hidden` dependiendo de qué queremos hacer. Cuando abrimos el modal debemos enfocar el primer elemento enfocable dentro del modal. Y obviamente debemos soportar la tecla `escape` para cerrar el modal.
-
-In the JavaScript part we will toggle the `aria-hidden` attribute depending on what we want to do. When opening the modal we must focus the first focusable element within the modal. And obviously we should support the `esc` key to close the modal.
 
 Working example:
 
