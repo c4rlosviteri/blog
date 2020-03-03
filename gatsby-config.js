@@ -14,6 +14,7 @@ module.exports = {
     social: {
       twitter: `c4rlosviteri`,
     },
+    url: 'https://c4rlosviteri.dev',
   },
   plugins: [
     {

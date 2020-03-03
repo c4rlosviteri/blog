@@ -5,6 +5,7 @@ import { rhythm, scale } from '../utils/typography';
 import Bio from '../components/bio';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import Share from '../components/share';
 
 function Translations(props) {
   const { translations } = props;
@@ -20,7 +21,11 @@ function Translations(props) {
         {translations.map(translation => {
           const language = translation.langKey === 'es' ? 'Español' : 'English';
 
-          return <Link to={translation.slug}>{language}</Link>;
+          return (
+            <Link key={translation.langKey} to={translation.slug}>
+              {language}
+            </Link>
+          );
         })}
       </p>
     </section>
@@ -37,6 +42,9 @@ class BlogPostTemplate extends React.Component {
       previous,
       next,
     } = this.props.pageContext;
+    const url = `${this.props.data.site.siteMetadata.url}${this.props.data.markdownRemark.fields.slug}`;
+    const twitter = this.props.data.site.siteMetadata.social.twitter;
+    const postTitle = this.props.data.markdownRemark.frontmatter.title;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -82,6 +90,8 @@ class BlogPostTemplate extends React.Component {
           </footer>
         </article>
 
+        <Share url={url} title={postTitle} twitter={twitter} />
+
         {/* TODO: create nav in the same language */}
         {/* <nav>
           <ul
@@ -121,6 +131,10 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        url
+        social {
+          twitter
+        }
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
